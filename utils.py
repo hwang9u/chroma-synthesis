@@ -1,11 +1,10 @@
 import numpy as np
+
 def item2arr(a):
     return np.array([a])
 
 def gaussian(x):
     return np.exp(-.5 * x**2)
-
-
     
 def slinterp(X, F):
     '''
@@ -21,10 +20,6 @@ def slinterp(X, F):
     Y = XX.T.ravel()[: (sx - 1) *F+1 ]
     return Y
     
-    
-import numpy as np
-
-# 2 ** oct = f / fo
 
 def octs2hz(octs, A440 = 440.):
     '''
@@ -34,7 +29,6 @@ def octs2hz(octs, A440 = 440.):
     return hz
 
 
-# hz -> octs, fo(27.5)에 상대적으로 몇 옥타브에 해당하는가?
 def hz2octs(freq, A440 = 440.):
     '''
     freq: frequency(hz)
